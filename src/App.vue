@@ -17,10 +17,11 @@ const totalItems = ref(0);
 const fetchCountries = async () => {
   try {
     const { data } = await axiosClient.get("/all");
+    console.log(data); 
     countries.value = data;
     totalItems.value = countries.value.length;
   } catch (error) {
-    console.log(error);
+    console.log(error); 
   }
 };
 
