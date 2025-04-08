@@ -1,8 +1,11 @@
-
+// src/utils/axios.ts
 import axios from "axios";
 
-const instance = axios.create({
-    baseURL: "https://restcountries.com/v3.1", 
-    });
+const axiosClient = axios.create({
+  baseURL: "https://restcountries.com/v3.1", 
+  headers: {
+    Accept: "application/json"
+  }
+});
 
-export default instance;
+export default axiosClient;
